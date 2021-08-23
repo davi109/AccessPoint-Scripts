@@ -12,5 +12,5 @@ curl -LJO https://raw.githubusercontent.com/davi109/ap_scripts/main/install/inst
 Logo após, execute o arquivo baixado com o comando:
 
 ```console
-./install.sh -h 'controller_server' -u 'api_user' -p 'api_password'
-```
+./install.sh -h 'controller_server' -u 'api_user' -p 'api_password'```
+
