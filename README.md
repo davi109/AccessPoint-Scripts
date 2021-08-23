@@ -5,7 +5,7 @@ Para instalação, acesso o terminal de seu roteador wireless com OpenWrt e exec
 
 ```console
 
-root@OpenWrt:~# wget https://raw.githubusercontent.com/davi109/ap_scripts/main/install/install.sh --output-document=install.sh;chmod +x install.sh
+root@OpenWrt:~# wget --no-check-certificate --content-disposition https://raw.githubusercontent.com/davi109/ap_scripts/main/install/install.sh;chmod +x install.sh
 
 ```
 
