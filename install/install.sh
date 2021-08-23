@@ -21,22 +21,27 @@ if [ -z $server ] || [ -z $user ] || [ -z $password ]; then
 else
 	opkg update
 	opkg remove wpad wpad-basic
-	opkg install wpad-mini bash bc curl
+	opkg install unzip wpad-mini bash bc curl
 	mkdir /usr/share/controller
 	mkdir /usr/share/controller/scripts
 	mkdir /usr/share/controller/api
-	chmod +x ./scripts/*.sh
+	curl -LJO https://github.com/davi109/ap_scripts/archive/refs/heads/main.zip
+	unzip ap_scripts-main.zip
+	chmod +x ./ap_scripts-main/scripts/*.sh
 	uci delete wireless.radio0.disabled
 	uci delete wireless.@wifi-iface[0].disabled
 	uci set wireless.@wifi-iface[0].macfilter=deny
-	cp ./scripts/*.sh /usr/share/controller/scripts/
+	cp ./ap_scripts-main/scripts/*.sh /usr/share/controller/scripts/
 	echo "manual" > /usr/share/controller/scripts/channel_mode
 	echo $server > /usr/share/controller/api/server
 	echo $user > /usr/share/controller/api/user
 	echo $password > /usr/share/controller/api/password
-	cat ./cron/cron.conf | crontab -
+	cat ./ap_scripts-main/cron/cron.conf | crontab -
 	/etc/init.d/cron enable
 	/etc/init.d/cron restart
+	opkg remove unzip
+	rm -rf ./ap_scripts-main
+	rm -rf ./ap_scripts-main.zip
 	uci commit wireless
 	wifi
 fi
