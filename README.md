@@ -13,6 +13,6 @@ Logo após, execute o arquivo baixado com o comando:
 
 ```console
 
-root@OpenWrt:~# ./install.sh
+root@OpenWrt:~# ./install.sh -h 'controller_server' -u 'api_user' -p 'api_password'
 
 ```
