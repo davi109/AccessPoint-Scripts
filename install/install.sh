@@ -21,7 +21,7 @@ if [ -z $server ] || [ -z $user ] || [ -z $password ]; then
 else
 	opkg update
 	opkg remove wpad wpad-basic
-	opkg install unzip wpad-mini bash bc curl
+	opkg install unzip wpad-mini bash bc
 	mkdir /usr/share/controller
 	mkdir /usr/share/controller/scripts
 	mkdir /usr/share/controller/api
