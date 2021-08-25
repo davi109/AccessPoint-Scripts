@@ -1,7 +1,7 @@
 # AccessPoint-Scripts
 Repositório contento scripts para instalação do controlador wireless em um ponto de acesso com OpenWrt
 
-Para instalação, acesso o terminal de seu roteador wireless com OpenWrt e execute os seguintes comando:
+Para instalação, acesso o terminal de seu roteador wireless com OpenWrt instalado e execute os seguintes comandos:
 
 ```console
 opkg update
@@ -9,7 +9,7 @@ opkg install curl
 curl -LJO https://raw.githubusercontent.com/davi109/AccessPoint-Scripts/main/install/install.sh; chmod +x install.sh
 ```
 
-Logo após, execute o arquivo baixado com o comando:
+Logo após, execute o arquivo baixado com os seguintes parâmetros:
 
 ```console
 ./install.sh -h 'controller_server' -u 'api_user' -p 'api_password'
