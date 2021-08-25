@@ -15,9 +15,9 @@ Este projeto tem como objetivo possibilitar a implementação de uma rede wirele
 
 Para que os pontos de acesso (roteadores wireless) consigam se comunicar com o servidor, é necessário alterar o firmware original de fábrica dos dispositivos e instalar o firmware OpenWRT. Para saber se seu dispositivo suporta o firmware, consulte o modelo do equipamento através do site: https://openwrt.org/toh/start
 
-Após verificar a compatibilidade do ponto de acesso com o firmware, realiza a instação seguindo as instruções presentes no site da OpenWRT.
+Após verificar a compatibilidade do ponto de acesso com o firmware, realize a instalação seguindo as instruções presentes no site da OpenWRT.
 
-<h3 align="left">Instação dos scripts</h3>
+<h3 align="left">Instalação dos scripts</h3>
 
 Para instalação, acesso o terminal de seu roteador wireless com OpenWrt instalado e execute os seguintes comandos:
 
