@@ -21,7 +21,7 @@ Após verificar a compatibilidade do ponto de acesso com o firmware, realiza a i
 
 Para instalação, acesso o terminal de seu roteador wireless com OpenWrt instalado e execute os seguintes comandos:
 
-```console
+``` bash
 opkg update
 opkg install curl
 curl -LJO https://raw.githubusercontent.com/davi109/AccessPoint-Scripts/main/install/install.sh; chmod +x install.sh
@@ -29,9 +29,16 @@ curl -LJO https://raw.githubusercontent.com/davi109/AccessPoint-Scripts/main/ins
 
 Logo após, execute o arquivo baixado com os seguintes parâmetros:
 
-```console
+``` bash
 ./install.sh -h 'controller_server' -u 'api_user' -p 'api_password'
 ```
+
+### 🛠 Tecnologias utilizadas
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [Bash](https://www.gnu.org/software/bash/)
+- [OpenWRT](https://www.gnu.org/software/bash/)
 
 ### Links importantes
 
