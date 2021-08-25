@@ -1,4 +1,4 @@
-# ap_scripts
+# AccessPoint-Scripts
 Repositório contento scripts para instalação do controlador wireless em um ponto de acesso com OpenWrt
 
 Para instalação, acesso o terminal de seu roteador wireless com OpenWrt e execute os seguintes comando:
