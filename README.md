@@ -6,7 +6,7 @@ Para instalação, acesso o terminal de seu roteador wireless com OpenWrt e exec
 ```console
 opkg update
 opkg install curl
-curl -LJO https://raw.githubusercontent.com/davi109/ap_scripts/main/install/install.sh; chmod +x install.sh
+curl -LJO https://raw.githubusercontent.com/davi109/AccessPoint-Scripts/main/install/install.sh; chmod +x install.sh
 ```
 
 Logo após, execute o arquivo baixado com o comando:
