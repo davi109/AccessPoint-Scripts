@@ -26,22 +26,22 @@ else
 	mkdir /usr/share/controller/scripts
 	mkdir /usr/share/controller/api
 	curl -LJO https://github.com/davi109/ap_scripts/archive/refs/heads/main.zip
-	unzip ap_scripts-main.zip
-	chmod +x ./ap_scripts-main/scripts/*.sh
+	unzip AccessPoint-Scripts-main.zip
+	chmod +x ./AccessPoint-Scripts-main/scripts/*.sh
 	uci delete wireless.radio0.disabled
 	uci delete wireless.@wifi-iface[0].disabled
 	uci set wireless.@wifi-iface[0].macfilter=deny
-	cp ./ap_scripts-main/scripts/*.sh /usr/share/controller/scripts/
+	cp ./AccessPoint-Scripts-main/scripts/*.sh /usr/share/controller/scripts/
 	echo "manual" > /usr/share/controller/scripts/channel_mode
 	echo $server > /usr/share/controller/api/server
 	echo $user > /usr/share/controller/api/user
 	echo $password > /usr/share/controller/api/password
-	cat ./ap_scripts-main/cron/cron.conf | crontab -
+	cat ./AccessPoint-Scripts-main/cron/cron.conf | crontab -
 	/etc/init.d/cron enable
 	/etc/init.d/cron restart
 	opkg remove unzip
-	rm -rf ./ap_scripts-main
-	rm -rf ./ap_scripts-main.zip
+	rm -rf ./AccessPoint-Scripts-main
+	rm -rf ./AccessPoint-Scripts-main.zip
 	uci commit wireless
 	wifi
 fi
