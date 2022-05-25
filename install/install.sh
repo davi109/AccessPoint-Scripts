@@ -31,6 +31,7 @@ else
 	uci delete wireless.radio0.disabled
 	uci delete wireless.@wifi-iface[0].disabled
 	uci set wireless.@wifi-iface[0].macfilter=deny
+	uci set wireless.radio1.disabled='1'
 	cp ./AccessPoint-Scripts-main/scripts/*.sh /usr/share/controller/scripts/
 	echo "manual" > /usr/share/controller/scripts/channel_mode
 	echo $server > /usr/share/controller/api/server
