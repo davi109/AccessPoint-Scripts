@@ -91,7 +91,7 @@ if [[ $teste -eq 1 ]]; then
 			echo "dsad"
                         reboot       
                 else
-			wifi
+			wifi reload
                 fi
 			                                                                
 	else                                                                      
