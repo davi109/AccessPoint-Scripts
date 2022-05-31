@@ -16,6 +16,7 @@ $caminho/scripts/get_blacklist.sh
 controller_server=$(cat $caminho/api/server)
 api_user=$(cat $caminho/api/user)
 api_pass=$(cat $caminho/api/password)
+api_port=$(cat $caminho/api/port)
 
 ipv4=$(ifstatus wan |  jsonfilter -e '@["ipv4-address"][0].address')
 ipv6=$(ifstatus wan |  jsonfilter -e '@["ipv6-address"][0].address')
@@ -62,6 +63,6 @@ json_close_array
 
 json_dump > $caminho/scripts/data.json                                                   
                                                                           
-curl --max-time 5  -X PUT -u $api_user:$api_pass  http://$controller_server:3333/api/v2/ap -H "Content-Type: application/json" -d @$caminho/scripts/data.json > $caminho/scripts/result.json
+curl --max-time 5  -X PUT -u $api_user:$api_pass  http://$controller_server:$api_port/api/v2/ap -H "Content-Type: application/json" -d @$caminho/scripts/data.json > $caminho/scripts/result.json
 
 $caminho/scripts/action.sh
