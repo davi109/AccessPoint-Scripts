@@ -7,13 +7,15 @@ do
          ;;
       u) user=$OPTARG
          ;;
-      p) password=$OPTARG
+      a) password=$OPTARG
       	 ;;
+      p) port=$OPTARG
+      ;;
       *) error="true"; echo -e "Incorrect parameter, please use the options below:\n-h Controller host\n-u API user\n-p API password"
    esac
 done
 
-if [ -z $server ] || [ -z $user ] || [ -z $password ]; then
+if [ -z $server ] || [ -z $user ] || [ -z $password ] || [ -z $port ]; then
 
 	if [ -z $error ]; then
 		echo -e "All parameters must be declared, please use the options below:\n-h Controller host\n-u API user\n-p API password"
@@ -37,6 +39,7 @@ else
 	echo $server > /usr/share/controller/api/server
 	echo $user > /usr/share/controller/api/user
 	echo $password > /usr/share/controller/api/password
+	echo $port > /usr/share/controller/api/port
 	cat ./AccessPoint-Scripts-main/cron/cron.conf | crontab -
 	/etc/init.d/cron enable
 	/etc/init.d/cron restart
