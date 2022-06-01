@@ -1,6 +1,6 @@
 #!/bin/sh
  
-while getopts "h:u:ap:" OPTION
+while getopts "h:u:a:p:" OPTION
 do
    case $OPTION in
       h) server=$OPTARG
@@ -11,14 +11,14 @@ do
       	 ;;
       p) port=$OPTARG
       ;;
-      *) error="true"; echo -e "Incorrect parameter, please use the options below:\n-h Controller host\n-u API user\n-p API password"
+      *) error="true"; echo -e "Incorrect parameter, please use the options below:\n-h Controller host\n-u API user\n-a API password\n-p API port"
    esac
 done
 
 if [ -z $server ] || [ -z $user ] || [ -z $password ] || [ -z $port ]; then
 
 	if [ -z $error ]; then
-		echo -e "All parameters must be declared, please use the options below:\n-h Controller host\n-u API user\n-p API password"
+		echo -e "All parameters must be declared, please use the options below:\n-h Controller host\n-u API user\n-a API password\n-p API port"
 	fi
 else
 	opkg update
