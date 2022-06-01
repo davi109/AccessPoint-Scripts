@@ -1,6 +1,6 @@
 #!/bin/sh
  
-while getopts "h:u:p:" OPTION
+while getopts "h:u:ap:" OPTION
 do
    case $OPTION in
       h) server=$OPTARG
