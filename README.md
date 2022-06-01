@@ -30,7 +30,7 @@ curl -LJO https://raw.githubusercontent.com/davi109/AccessPoint-Scripts/main/ins
 Logo após, execute o arquivo baixado com os seguintes parâmetros:
 
 ``` bash
-./install.sh -h 'controller_server' -u 'api_user' -p 'api_password'
+./install.sh -h 'controller_server' -u 'api_user' -a 'api_password' -p 'api_port'
 ```
 
 ### 🛠 Tecnologias utilizadas
